@@ -6,8 +6,8 @@ public class OkJavaGoInHome {
 
     public static void main(String args[]){
 
-        final String id = JOptionPane.showInputDialog("Input id");
-        String brightness = JOptionPane.showInputDialog("Input brightness");
+        final String id = args[0];
+        String brightness = args[1];
 
         //Elevator call
         Elevator myElevator = new Elevator(id);
