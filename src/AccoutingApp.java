@@ -1,6 +1,5 @@
-public class AccoutingApp {
-
-    public static double valueOfSupply = 10000;
+class Accounting{
+    public static double valueOfSupply;
     public static double vatRate = 0.1;
 
     public static double getVAT(double valueOfSupply, double vatRate){
@@ -12,10 +11,14 @@ public class AccoutingApp {
         double total = valueOfSupply + getVAT(valueOfSupply, vatRate);
         return total;
     }
+}
+
+public class AccoutingApp {
 
     public static void main(String[] args){
-        System.out.println("VAT : "+getVAT(valueOfSupply, vatRate));
-        System.out.println("Total cost : "+getTotal(valueOfSupply));
+        Accounting.valueOfSupply = 10000;
+        System.out.println("VAT : "+Accounting.getVAT(Accounting.valueOfSupply, Accounting.vatRate));
+        System.out.println("Total cost : "+Accounting.getTotal(Accounting.valueOfSupply));
 
     }
 }
