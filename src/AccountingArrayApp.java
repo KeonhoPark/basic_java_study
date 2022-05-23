@@ -9,28 +9,23 @@ public class AccountingArrayApp {
         double vat = valueOfSupply * vatRate;
         double income = valueOfSupply - expense;
 
-        double rate1 = 0.5;
-        double rate2 = 0.3;
-        double rate3 = 0.2;
-
-        double[] dividendRates = new double[3];
-        dividendRates[0] = 0.5;
-        dividendRates[1] = 0.3;
-        dividendRates[2] = 0.2;
-
-        double dividend1 = income * dividendRates[0];
-        double dividend2 = income * dividendRates[1];
-        double dividend3 = income * dividendRates[2];
-
 
         System.out.println("Value of Supply : "+ valueOfSupply);
         System.out.println("VAT : "+ vat);
         System.out.println("Total : "+ total);
         System.out.println("Expense : "+expense);
         System.out.println("Income : "+income);
-        System.out.println("Dividend1 : "+dividend1);
-        System.out.println("Dividend2 : "+dividend2);
-        System.out.println("Dividend3 : "+dividend3);
+
+        double[] dividendRates = new double[3];
+        dividendRates[0] = 0.5;
+        dividendRates[1] = 0.3;
+        dividendRates[2] = 0.2;
+
+        int i = 0;
+        while (i < 3){
+            System.out.println("dividend : "+income * dividendRates[i]);
+            i++;
+        }
 
 
     }
